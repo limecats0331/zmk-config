@@ -1,4 +1,4 @@
-#include <physical_layouts.dtsi>
+#include "physical_layouts.dtsi"
 
 / {
     kata0510_lily58_layout: kata0510_lily58_layout {
