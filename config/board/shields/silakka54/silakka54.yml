@@ -1,0 +1,13 @@
+file_format: "1"
+id: silakka54
+name: silakka54
+type: shield
+requires: [pro_micro]
+exposes: [i2c_oled]
+features:
+  - keys
+  - display
+  - studio
+siblings:
+  - silakka54_left
+  - silakka54_right
