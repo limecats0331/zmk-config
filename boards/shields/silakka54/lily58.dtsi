@@ -1,9 +1,9 @@
 #include "physical_layouts.dtsi"
 
 / {
-    kata0510_lily58_layout: kata0510_lily58_layout {
+    silakka54_layout: silakka54_layout {
         compatible = "zmk,physical-layout";
-        display-name = "Default";
+        display-name = "Silakka54";
 
         keys  //                     w   h    x    y     rot    rx    ry
             = <&key_physical_attrs 100 100    0   50       0     0     0>
