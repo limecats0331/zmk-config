@@ -20,6 +20,16 @@
             flavor = "tap-preferred";
             require-prior-idle-ms = <125>;
         };
+
+        spc_ctrl_morph: spc_ctrl_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPC_CTRL_MORPH";
+            bindings = <&TP 1 SPACE>, <&kp SPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     combos { compatible = "zmk,combos"; };
@@ -37,11 +47,11 @@
 
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4        &kp N5                       &kp N6   &kp N7           &kp N8     &kp N9   &kp N0    &kp GRAVE
-&kp TAB    &kp Q   &kp W   &kp E     &kp R         &kp T                        &kp Y    &kp U            &kp I      &kp O    &kp P     &kp BACKSPACE
-&kp LCTRL  &kp A   &kp S   &kp D     &kp F         &kp G                        &kp H    &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C     &kp V         &kp B        &none    &none  &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LEFT_GUI  &TP 1 SPACE  &none    &none  &kp RET  &TP 2 LC(SPACE)  &kp RGUI
+&kp ESC    &kp N1  &kp N2  &kp N3    &kp N4        &kp N5                           &kp N6   &kp N7           &kp N8     &kp N9   &kp N0    &kp GRAVE
+&kp TAB    &kp Q   &kp W   &kp E     &kp R         &kp T                            &kp Y    &kp U            &kp I      &kp O    &kp P     &kp BACKSPACE
+&kp LCTRL  &kp A   &kp S   &kp D     &kp F         &kp G                            &kp H    &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C     &kp V         &kp B            &none    &none  &kp N    &kp M            &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
+                           &kp LALT  &kp LEFT_GUI  &spc_ctrl_morph  &none    &none  &kp RET  &TP 2 LC(SPACE)  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
