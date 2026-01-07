@@ -22,6 +22,16 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        hanyung {
+            bindings = <&kp LANG_HANGEUL>;
+            key-positions = <51 24>;
+            layers = <0>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
